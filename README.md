@@ -12,14 +12,9 @@ Vá para a branch master do seu projeto e execute o comando:
 
 `git branch` ou `git branch -a`
 
-Verifique se as seguintes branchs apareceram:
-
-`master` e `gabarito`
+Verifique se a a branch `master` apareceu:
 
 * O exercício deverá ser feito na branch `master`.
-
-* Na branch `gabarito` contém um Readme com o gabarito **guiado** para esse exercício.
-Não tem problema dar checkout para conferir, mas não deixe de tentar resolver por conta própria :).
 
 
 Observe o que deve ser feito nas instruções.
