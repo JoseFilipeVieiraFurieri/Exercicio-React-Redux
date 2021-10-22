@@ -76,10 +76,12 @@ _Lembre-se que, ao montar a estrutura do Redux, é preciso importar o `Provider`
 
 **2 - Volte em cada um dos arquivos da pasta `pages` e faça o que é pedido nas linhas comentadas.**
 
+_Lembre-se de fazer as importações corretas para o bom funcionamento da sua aplicação._
+
 **3 - Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `store`.**
 
 **Dica:** Lembre-se que o `mapStateToProps` lê as informações da `store` e o `mapDispatchToProps` envia as informações para a `store`.
 
-**3 - Renderize, em `FormDataDisplay`, todas as informações que estão salvas na `store`.**
+**4 - Renderize, em `FormDataDisplay`, todas as informações que estão salvas na `store`.**
 
 ---
