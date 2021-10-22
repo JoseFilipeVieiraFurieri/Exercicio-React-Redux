@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-// Importe o connect, e a action criada para o valores pessoais
 
 import Input from '../components/Input';
 import Button from '../components/Button';
@@ -95,9 +92,3 @@ class PersonalForm extends Component {
     );
   }
 }
-
-// Faça o propTypes
-
-// Faça o mapDispatch e o mapState
-
-// Faça a conexão com o connect

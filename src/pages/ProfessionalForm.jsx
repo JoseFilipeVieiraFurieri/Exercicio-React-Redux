@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-// Importe o connect, e a action criada para o valores profissionais
-// import { connect } from 'react-redux';
-
-// import { setProfessionalValue } from '../redux/action/action';
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
@@ -26,11 +21,9 @@ class ProfessionalForm extends Component {
     this.setState({ [name]: value });
   }
 
-  // Crie na função "onSubmitForm" a chamada do seu dispatch, que é executada ao clicar no botão e que vai redirecionar para a página seguinte
+  // Crie no escopo da função "onSubmitForm" a chamada do seu dispatch, que é executada ao clicar no botão e que vai redirecionar para a página seguinte
   onSubmitForm() {
-    // const { history, dispatchSetValue } = this.props;
-    // dispatchSetValue(this.state);
-    // history.push('/formdisplay');
+
   }
 
   render() {
@@ -66,9 +59,3 @@ class ProfessionalForm extends Component {
     );
   }
 }
-
-// Faça o propTypes
-
-// Faça o mapDispatch e o mapState
-
-// Faça a conexão com o connect

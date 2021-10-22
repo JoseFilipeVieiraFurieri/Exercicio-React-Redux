@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-// Importe o connect
 
 class FormDataDisplay extends Component {
   render() {
     // Recupere as informações do seu estado criado no Redux
-
     return (
       <div>
         <h2>Dados enviados</h2>
@@ -50,9 +46,3 @@ class FormDataDisplay extends Component {
     );
   }
 }
-
-// Faça o propTypes
-
-// Faça o mapState
-
-// Faça a conexão com o connect
