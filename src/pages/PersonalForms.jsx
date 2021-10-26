@@ -18,17 +18,11 @@ class PersonalForm extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.onSubmitForm = this.onSubmitForm.bind(this);
   }
 
   handleChange({ target }) {
     const { name, value } = target;
     this.setState({ [name]: value });
-  }
-
-  // Crie no escopo da função "onSubmitForm" a chamada do seu dispatch, que é executada ao clicar no botão e que vai redirecionar para a página seguinte
-  onSubmitForm() {
-
   }
 
   render() {
@@ -87,7 +81,11 @@ class PersonalForm extends Component {
           name="estado"
           options={ states }
         />
-        <Button type="button" label="Enviar" onClick={ this.onSubmitForm } />
+        <Button
+          type="button"
+          label="Enviar"
+          onClick={ () => console.log('Ao clicar, envie a informação do formulário') }
+        />
       </fieldset>
     );
   }

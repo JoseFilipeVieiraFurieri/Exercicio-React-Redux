@@ -13,17 +13,11 @@ class ProfessionalForm extends Component {
       descricao: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.onSubmitForm = this.onSubmitForm.bind(this);
   }
 
   handleChange({ target }) {
     const { name, value } = target;
     this.setState({ [name]: value });
-  }
-
-  // Crie no escopo da função "onSubmitForm" a chamada do seu dispatch, que é executada ao clicar no botão e que vai redirecionar para a página seguinte
-  onSubmitForm() {
-
   }
 
   render() {
@@ -54,7 +48,10 @@ class ProfessionalForm extends Component {
           value={ descricao }
           required
         />
-        <Button label="enviar" onClick={ this.onSubmitForm } />
+        <Button
+          label="enviar"
+          onClick={ () => console.log('Envia as informações para a store') }
+        />
       </fieldset>
     );
   }
