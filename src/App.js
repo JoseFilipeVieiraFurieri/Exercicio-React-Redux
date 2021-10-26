@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PersonalForms from './pages/PersonalForms';
+import PersonalForm from './pages/PersonalForm';
 import ProfessionalForm from './pages/ProfessionalForm';
 import FormDataDisplay from './pages/FormDataDisplay';
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={ PersonalForms } />
+          <Route exact path="/" component={ PersonalForm } />
           <Route path="/professionalform" component={ ProfessionalForm } />
           <Route path="/formdisplay" component={ FormDataDisplay } />
         </Switch>
@@ -17,4 +17,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

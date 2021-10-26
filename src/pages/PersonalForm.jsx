@@ -90,3 +90,5 @@ class PersonalForm extends Component {
     );
   }
 }
+
+export default PersonalForm;

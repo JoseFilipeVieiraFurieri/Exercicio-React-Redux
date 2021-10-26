@@ -56,3 +56,5 @@ class ProfessionalForm extends Component {
     );
   }
 }
+
+export default ProfessionalForm;

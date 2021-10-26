@@ -46,3 +46,5 @@ class FormDataDisplay extends Component {
     );
   }
 }
+
+export default FormDataDisplay;
