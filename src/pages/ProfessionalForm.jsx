@@ -8,9 +8,9 @@ class ProfessionalForm extends Component {
   constructor() {
     super();
     this.state = {
-      curriculo: '',
-      cargo: '',
-      descricao: '',
+      curriculum: '',
+      job: '',
+      description: '',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -21,31 +21,31 @@ class ProfessionalForm extends Component {
   }
 
   render() {
-    const { curriculo, cargo, descricao } = this.state;
+    const { curriculum, job, description } = this.state;
     return (
       <fieldset>
         <TextArea
           label="Resumo do currículo: "
-          value={ curriculo }
-          name="curriculo"
+          value={ curriculum }
+          name="curriculum"
           maxLength="1000"
           onChange={ this.handleChange }
           required
         />
         <Input
           label="Cargo:"
-          name="cargo"
+          name="job"
           type="text"
-          value={ cargo }
+          value={ job }
           onChange={ this.handleChange }
           required
         />
         <TextArea
           label="Descrição do cargo: "
-          name="descricao"
+          name="description"
           maxLength="500"
           onChange={ this.handleChange }
-          value={ descricao }
+          value={ description }
           required
         />
         <Button

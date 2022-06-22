@@ -9,12 +9,12 @@ class PersonalForm extends Component {
     super();
 
     this.state = {
-      nome: '',
+      name: '',
       email: '',
       cpf: '',
-      endereco: '',
-      cidade: '',
-      estado: '',
+      address: '',
+      city: '',
+      uf: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -26,23 +26,23 @@ class PersonalForm extends Component {
   }
 
   render() {
-    const { nome, email, cpf, endereco, cidade, estado } = this.state;
-    const states = [
+    const { name, email, cpf, address, city, uf } = this.state;
+    const ufList = [
       'Rio de Janeiro',
       'Minas Gerais',
       'Amapá', 'Amazonas', 'São Paulo', 'Ceará', 'Distrito Federal'];
     return (
       <fieldset>
         <Input
-          label="nome: "
+          label="Nome: "
           type="text"
           onChange={ this.handleChange }
-          value={ nome }
-          name="nome"
+          value={ name }
+          name="name"
           required
         />
         <Input
-          label="email: "
+          label="Email: "
           type="text"
           onChange={ this.handleChange }
           value={ email }
@@ -50,7 +50,7 @@ class PersonalForm extends Component {
           required
         />
         <Input
-          label="cpf: "
+          label="Cpf: "
           type="text"
           onChange={ this.handleChange }
           value={ cpf }
@@ -58,28 +58,28 @@ class PersonalForm extends Component {
           required
         />
         <Input
-          label="endereco: "
+          label="Endereço: "
           type="text"
           onChange={ this.handleChange }
-          value={ endereco }
-          name="endereco"
+          value={ address }
+          name="address"
           required
         />
         <Input
-          label="cidade: "
+          label="Cidade: "
           type="text"
           onChange={ this.handleChange }
-          name="cidade"
-          value={ cidade }
+          name="city"
+          value={ city }
         />
         <Select
           defaultOption="Selecione"
           onChange={ this.handleChange }
-          value={ estado }
+          value={ uf }
           label="Estado: "
-          id="estado"
-          name="estado"
-          options={ states }
+          id="uf"
+          name="uf"
+          options={ ufList }
         />
         <Button
           type="button"

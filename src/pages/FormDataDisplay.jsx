@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class FormDataDisplay extends Component {
   render() {
@@ -8,7 +9,7 @@ class FormDataDisplay extends Component {
         <h2>Dados enviados</h2>
         <div>
           Nome:
-          {nome}
+          { name }
         </div>
         <div>
           Email:
@@ -20,31 +21,40 @@ class FormDataDisplay extends Component {
         </div>
         <div>
           Endereço:
-          { endereco }
+          { address }
         </div>
         <div>
           Cidade:
-          { cidade }
+          { city }
         </div>
         <div>
           Estado:
-          { estado }
+          { uf }
         </div>
         <div>
           Currículo:
-          { curriculo }
+          { curriculum }
         </div>
         <div>
           Cargo:
-          { cargo }
+          { job }
         </div>
         <div>
           Descrição do cargo:
-          { descricao }
+          { description }
         </div>
       </div>
     );
   }
 }
+FormDataDisplay.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
+  curriculum: PropTypes.string.isRequired,
+  uf: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
 
+};
 export default FormDataDisplay;
