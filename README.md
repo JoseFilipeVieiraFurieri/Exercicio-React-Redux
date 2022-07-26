@@ -58,10 +58,7 @@ Você vai precisar de:
 Então, mãos ao código!!
 
 **1 - Implemente o Redux:**
-- Dentro de uma pasta "redux", crie as pastas "actions", "reducers" e "store".
-- Dentro de "actions" crie um arquivo chamado `action.js`.
-- Dentro de "reducers" crie um arquivo chamado `reducer.js` e, caso necessário, um arquivo `index.js` para usar o `combineReducers`.
-- Dentro de "store" crie um arquivo chamado `store.js`.
+- Crie uma pasta para armazenar suas implementações do Redux. Sinta-se à vontade para escolher a melhor forma de nomear e organizar suas sub-pastas e aquivos.
 - Implemente o `reducer`.
 - Implemente a `store`.
 - Implemente as `actions`.
