@@ -58,7 +58,12 @@ Você vai precisar de:
 Então, mãos ao código!!
 
 **1 - Implemente o Redux:**
-- Crie uma pasta para armazenar suas implementações do Redux. Sinta-se à vontade para escolher a melhor forma de nomear e organizar suas sub-pastas e aquivos.
+- Crie a estrutura de pastas necessária para a implementação do Redux.
+Como sugestão, você pode usar  a seguinte estrutura:
+    - crie a pasta `src/store`, para agrupar todos os arquivos relacionados com o Redux;
+    - crie a pasta `src/store/actions` para armazenar as `actions` do projeto;
+    - crie a pasta `src/store/reducers` para armazenar os `reducers` do projeto;
+    - crie o arquivo `src/store/index.js`, que será o arquivo responsável por criar e exportar a `store` da aplicação.
 - Implemente o `reducer`.
 - Implemente a `store`.
 - Implemente as `actions`.
