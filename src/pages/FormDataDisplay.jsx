@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class FormDataDisplay extends Component {
   render() {
@@ -9,52 +9,53 @@ class FormDataDisplay extends Component {
         <h2>Dados enviados</h2>
         <div>
           Nome:
-          { name }
+          {/* { name } */}
         </div>
         <div>
           Email:
-          { email }
+          {/* { email } */}
         </div>
         <div>
           CPF:
-          { cpf }
+          {/* { cpf } */}
         </div>
         <div>
           Endereço:
-          { address }
+          {/* { address } */}
         </div>
         <div>
           Cidade:
-          { city }
+          {/* { city } */}
         </div>
         <div>
           Estado:
-          { uf }
+          {/* { uf } */}
         </div>
         <div>
           Currículo:
-          { curriculum }
+          {/* { curriculum } */}
         </div>
         <div>
           Cargo:
-          { job }
+          {/* { job } */}
         </div>
         <div>
           Descrição do cargo:
-          { description }
+          {/* { description } */}
         </div>
       </div>
     );
   }
 }
-FormDataDisplay.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  job: PropTypes.string.isRequired,
-  curriculum: PropTypes.string.isRequired,
-  uf: PropTypes.string.isRequired,
-  city: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
 
-};
+// FormDataDisplay.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   job: PropTypes.string.isRequired,
+//   curriculum: PropTypes.string.isRequired,
+//   uf: PropTypes.string.isRequired,
+//   city: PropTypes.string.isRequired,
+//   address: PropTypes.string.isRequired,
+// };
+
 export default FormDataDisplay;
