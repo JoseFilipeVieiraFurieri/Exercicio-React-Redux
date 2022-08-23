@@ -4,6 +4,16 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
 
+const UF_LIST = [
+  'Rio de Janeiro',
+  'Minas Gerais',
+  'Amapá',
+  'Amazonas',
+  'São Paulo',
+  'Ceará',
+  'Distrito Federal',
+];
+
 class PersonalForm extends Component {
   constructor() {
     super();
@@ -27,12 +37,13 @@ class PersonalForm extends Component {
 
   render() {
     const { name, email, cpf, address, city, uf } = this.state;
-    const ufList = [
-      'Rio de Janeiro',
-      'Minas Gerais',
-      'Amapá', 'Amazonas', 'São Paulo', 'Ceará', 'Distrito Federal'];
+
     return (
-      <fieldset>
+      <form
+        className="box column is-half is-offset-one-quarter"
+        onSubmit={ () => console.log('Ao clicar, envie a informação do formulário') }
+      >
+        <h1 className="title">Informações Pessoais</h1>
         <Input
           label="Nome: "
           type="text"
@@ -77,16 +88,15 @@ class PersonalForm extends Component {
           onChange={ this.handleChange }
           value={ uf }
           label="Estado: "
-          id="uf"
           name="uf"
-          options={ ufList }
+          options={ UF_LIST }
         />
         <Button
-          type="button"
+          type="submit"
           label="Enviar"
-          onClick={ () => console.log('Ao clicar, envie a informação do formulário') }
+          moreClasses="is-fullwidth is-info"
         />
-      </fieldset>
+      </form>
     );
   }
 }

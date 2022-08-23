@@ -8,28 +8,28 @@ class Select extends Component {
       name,
       onChange,
       value,
-      id,
       defaultOption,
-      defaultValue,
       options,
     } = this.props;
     return (
-      <label htmlFor={ name }>
+      <label htmlFor={ name } className="label">
         { label }
-        <select
-          name={ name }
-          id={ id }
-          required
-          onChange={ onChange }
-          value={ value }
-        >
-          <option value={ defaultValue }>{ defaultOption }</option>
-          {
-            options.map((option, index) => (
-              <option key={ index }>{ option }</option>
-            ))
-          }
-        </select>
+        <div className="select">
+          <select
+            name={ name }
+            id={ name }
+            required
+            onChange={ onChange }
+            value={ value }
+          >
+            <option>{ defaultOption }</option>
+            {
+              options.map((option, index) => (
+                <option key={ index }>{ option }</option>
+              ))
+            }
+          </select>
+        </div>
       </label>
     );
   }
@@ -38,13 +38,11 @@ class Select extends Component {
 Select.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.string,
   ).isRequired,
-  defaultValue: PropTypes.string.isRequired,
   defaultOption: PropTypes.string.isRequired,
 };
 

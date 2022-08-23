@@ -23,7 +23,11 @@ class ProfessionalForm extends Component {
   render() {
     const { curriculum, job, description } = this.state;
     return (
-      <fieldset>
+      <form
+        className="box column is-half is-offset-one-quarter"
+        onSubmit={ () => console.log('Envia as informações para a store') }
+      >
+        <h1 className="title">Informações Profissionais</h1>
         <TextArea
           label="Resumo do currículo: "
           value={ curriculum }
@@ -49,10 +53,11 @@ class ProfessionalForm extends Component {
           required
         />
         <Button
-          label="enviar"
-          onClick={ () => console.log('Envia as informações para a store') }
+          type="submit"
+          label="Enviar"
+          moreClasses="is-fullwidth is-info"
         />
-      </fieldset>
+      </form>
     );
   }
 }

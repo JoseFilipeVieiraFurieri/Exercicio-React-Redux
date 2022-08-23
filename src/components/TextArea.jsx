@@ -5,14 +5,18 @@ class TextArea extends Component {
   render() {
     const { name, label, onChange, value, maxLength } = this.props;
     return (
-      <label htmlFor={ name }>
+      <label htmlFor={ name } className="label">
         { label }
-        <textarea
-          name={ name }
-          value={ value }
-          onChange={ onChange }
-          maxLength={ maxLength }
-        />
+        <div className="control">
+          <textarea
+            className="textarea"
+            name={ name }
+            value={ value }
+            onChange={ onChange }
+            maxLength={ maxLength }
+            id={ name }
+          />
+        </div>
       </label>
     );
   }

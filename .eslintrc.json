@@ -11,5 +11,8 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["react"]
+  "plugins": ["react"],
+  "rules": {
+    "react/button-has-type": 0
+  }
 }
