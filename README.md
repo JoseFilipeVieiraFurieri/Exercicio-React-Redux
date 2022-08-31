@@ -39,7 +39,7 @@ Vamos criar formulários utilizando `Redux`! 🚀
 
 # Começando o exercício
 
-A sua equipe deve implementar o Redux para dois formulários, cada um em uma etapa, um para dados pessoais e outro para dados profissionais e exibí-los na tela.
+Neste exercício será necessário implementar o Redux para dois formulários, cada um em uma etapa, um para dados pessoais e outro para dados profissionais e exibí-los na tela.
 
 Lembrando que os formulários já estão criados, então não é necessário criar novos arquivos além dos propostos para a execução do exercício.
 
