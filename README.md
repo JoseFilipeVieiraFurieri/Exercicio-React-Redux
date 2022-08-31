@@ -1,4 +1,4 @@
-# Exercício de fixação
+# Exercício - Formulário
 
 Vamos criar formulários utilizando `Redux`! 🚀
 
