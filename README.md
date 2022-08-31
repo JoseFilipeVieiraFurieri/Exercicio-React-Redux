@@ -68,7 +68,7 @@ Como sugestão, você pode usar  a seguinte estrutura:
 
 > 👀 **De olho nas dicas:** 
 > - De início, você pode implementar seu reducer apenas com o valor `default`.
-> - O `composeWithDevTools` pode te ajudar.
+> - O `composeWithDevTools` pode te ajudar a visualizar as etapas do ***Redux***
 > - Lembre-se que, ao montar a estrutura do Redux, é preciso importar o `Provider`, que recebe a `store`, no `index.js`._
 > - Caso tenha dificuldade para montar a estrutura do Redux, você pode consultar o passo a passo que está nesse [link.](https://app.betrybe.com/course/front-end/gerenciamento-de-estado-com-redux/usando-o-redux-no-react/a2dac445-434c-4690-83da-7ebef1aad2cd/conteudos/cfc29dbb-9243-4450-baa6-6da6ac0d0674/fluxo-de-dados-no-redux/4341ae67-1e44-4a06-84dc-0f1f87a56f0f?use_case=side_bar)
 > - Faça as importações corretas para o bom funcionamento da sua aplicação._
