@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
+import { addProfessionInfo } from '../redux/actions';
 
 class ProfessionalForm extends Component {
   constructor() {
@@ -18,6 +20,14 @@ class ProfessionalForm extends Component {
   handleChange({ target }) {
     const { name, value } = target;
     this.setState({ [name]: value });
+  }
+
+  handleClick = (e) => {
+    e.preventDefault();
+    const { dispatch, history } = this.props;
+
+    dispatch(addProfessionInfo(this.state));
+    history.push('/formdisplay');
   }
 
   render() {
@@ -55,6 +65,7 @@ class ProfessionalForm extends Component {
         <Button
           type="submit"
           label="Enviar"
+          onClick={ this.handleClick }
           moreClasses="is-fullwidth is-info"
         />
       </form>
@@ -62,4 +73,15 @@ class ProfessionalForm extends Component {
   }
 }
 
-export default ProfessionalForm;
+ProfessionalForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  info: state.teste,
+});
+
+export default connect(mapStateToProps)(ProfessionalForm);
