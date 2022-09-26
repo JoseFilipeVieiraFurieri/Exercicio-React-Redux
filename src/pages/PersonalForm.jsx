@@ -1,8 +1,11 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
+import { addInfo } from '../redux/actions';
 
 const UF_LIST = [
   'Rio de Janeiro',
@@ -35,9 +38,16 @@ class PersonalForm extends Component {
     this.setState({ [name]: value });
   }
 
+  handleClick = (e) => {
+    e.preventDefault();
+    const { dispatch, history } = this.props;
+
+    dispatch(addInfo(this.state));
+    history.push('/professionalform');
+  }
+
   render() {
     const { name, email, cpf, address, city, uf } = this.state;
-
     return (
       <form
         className="box column is-half is-offset-one-quarter"
@@ -94,6 +104,7 @@ class PersonalForm extends Component {
         <Button
           type="submit"
           label="Enviar"
+          onClick={ this.handleClick }
           moreClasses="is-fullwidth is-info"
         />
       </form>
@@ -101,4 +112,15 @@ class PersonalForm extends Component {
   }
 }
 
-export default PersonalForm;
+PersonalForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  info: state.teste,
+});
+
+export default connect(mapStateToProps)(PersonalForm);
